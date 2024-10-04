@@ -15,73 +15,79 @@
     <div id="formdiv">
         <div class="form">
             <!-- Login Form -->
-            <form class="form-horizontal signin" method="post">
+            <form class="form-horizontal signin" method="post" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>">
                 <div class="form-wrap" style="position: relative;">
-                  <h2>Login</h2>
-                  <div class="form-group">
-                      <div class="relative">
-                          <input class="form-control" name="loginEmail" id="loginEmail" type="email" placeholder="Email">
-                          <i class="fa fa-user"></i>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <div class="relative">
-                          <input class="form-control myinput" name="loginPassword" id="loginPassword" type="password" placeholder="Password">
-                          <i class="fa fa-key"></i>
-                      </div>
-                      <span class="pull-right" id="forgot"><small><a href="#">Forgot Password?</a></small></span>
-                  </div> 
-                                  
-                  <div class="login-btn">
-                      <button class="movebtn movebtnsu" id="loginbtn">Login <i class="fa fa-fw fa-lock"></i></button>
-                      <div class="relative"><hr><span class="login-text">or login with</span></div>
-                      <div class="clearfix"></div>
-                      <div class="social-btn clearfix">
-                          <button class="movebtn google" type="button">Google <i class="fa fa-fw fa-google"></i></button>
-                          <button class="movebtn facebook" type="button">Facebook <i class="fa fa-fw fa-facebook"></i></button>
-                      </div>
-                  </div>
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <div class="relative">
+                            <input class="form-control" name="loginEmail" id="loginEmail" type="email" placeholder="Email">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="relative">
+                            <input class="form-control myinput" name="loginPassword" id="loginPassword" type="password" placeholder="Password">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <span class="pull-right" id="forgot"><small><a href="#">Forgot Password?</a></small></span>
+                    </div>
+
+                    <div class="login-btn">
+                        <button class="movebtn movebtnsu" id="loginbtn" type="submit">Login <i class="fa fa-fw fa-lock"></i></button>
+                        <div class="relative">
+                            <hr><span class="login-text">or login with</span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="social-btn clearfix">
+                            <button class="movebtn google" type="button">Google <i class="fa fa-fw fa-google"></i></button>
+                            <button class="movebtn facebook" type="button">Facebook <i class="fa fa-fw fa-facebook"></i></button>
+                        </div>
+						<div class="social-btn clearfix">
+							<button class="movebtn Microsoft" type="button">Microsoft <i class="fa-brands fa-windows"></i></i></button>
+							<button class="movebtn Yahoo" type="button">Yahoo <i class="fa-brands fa-yahoo"></i></button>
+						</div>
+                    </div>
                 </div>
                 <div class="sign-up">
-                  <a href="#" class="signbtn"><small>Not a member? Sign Up <i>(Click me)</i></small></a>
-              </div>
+                    <a href="#" class="signbtn"><small>Not a member? Sign Up <i>(Click me)</i></small></a>
+                </div>
             </form>
-        
+
             <!-- Registration Form -->
-            <form class="form-horizontal signup" method="post">
+            <form class="form-horizontal signup" method="post" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>">
                 <div class="form-wrap" style="position: relative;">
-                <h2>Sign Up</h2>
+                    <h2>Sign Up</h2>
 
-                <div class="form-group">
-                    <div class="relative">
-                        <input class="form-control" name="signUpEmail" type="email" id="signUpEmail" placeholder="Email Address">
-                        <i class="fa fa-envelope"></i>
+                    <div class="form-group">
+                        <div class="relative">
+                            <input class="form-control" name="signUpEmail" type="email" id="signUpEmail" placeholder="Email Address">
+                            <i class="fa fa-envelope"></i>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <div class="relative">
-                        <input class="form-control myinput" name="signUpPassword" id="signUpPassword" type="password"  placeholder="Password">
-                        <i class="fa fa-key"></i>
+
+                    <div class="form-group">
+                        <div class="relative">
+                            <input class="form-control myinput" name="signUpPassword" id="signUpPassword" type="password" placeholder="Password">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <span class="pull-right"><small><a href="#" id="showhide">show / hide</a></small></span>
                     </div>
-                    <span class="pull-right"><small><a href="#" id="showhide">show / hide</a></small></span>
-                </div> 
-                                
-                <div class="login-btn">
-                    <button class="movebtn movebtnsu"  id="SignBtn">Submit <i class="fa fa-fw fa-paper-plane"></i></button>
-                </div>
+
+                    <div class="login-btn">
+                        <button class="movebtn movebtnsu" id="SignBtn" type="submit">Submit <i class="fa fa-fw fa-paper-plane"></i></button>
+                    </div>
                 </div>
                 <div class="sign-up">
-                <button type="button" class="signbtn" id="signbtn"><small>Already member? Sign in <i>(Click me)</i></small></button>
+                    <button type="button" class="signbtn" id="signbtn"><small>Already member? Sign in <i>(Click me)</i></small></button>
                 </div>
             </form>
 
-            <!-- Forgoot Password -->
-             <form class="form-horizontal mail d-none" method="post">
+            <!-- Forgot Password -->
+            <form class="form-horizontal mail d-none" method="post" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>">
                 <div class="form-wrap" style="position: relative;">
                     <h2>Forgot Password</h2>
-    
+
                     <div class="form-group">
                         <div class="relative">
                             <input class="form-control" name="sendEmail" type="email" id="sendEmail" placeholder="Email Address">
@@ -90,30 +96,34 @@
                         <span class="pull-right" id="backToLogin"><small><a href="#">Go back to login!</a></small></span>
                     </div>
                     <div class="login-btn">
-                        <button class="movebtn movebtnsu"  id="sendmail">Send Email<i class="fa fa-fw fa-paper-plane"></i></button>
+                        <button class="movebtn movebtnsu" id="sendmail" type="submit">Send Email <i class="fa fa-fw fa-paper-plane"></i></button>
                     </div>
                 </div>
-             </form>
+            </form>
         </div>
     </div>
     <script>
         $(".signup").css("display", "none");
-
-        $(".signbtn").click(function(){
-            $("form").animate({ height:"toggle", opacity: "toggle"}, "slow");
+        $(".signbtn").click(function() {
+            $("form").animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, "slow");
         });
 
-        document.getElementById("forgot").addEventListener("click",(event)=>{
+        document.getElementById("forgot").addEventListener("click", (event) => {
             event.preventDefault();
             document.querySelector(".mail").classList.remove("d-none");
             document.querySelector(".signin").classList.add("d-none");
         })
 
-        document.getElementById("backToLogin").addEventListener("click",(event)=>{
-            window.location.reload();
+        document.getElementById("backToLogin").addEventListener("click", (event) => {
+        //             window.location.reload();
+            document.querySelector(".signin").classList.remove("d-none");
+            document.querySelector(".mail").classList.add("d-none");
         })
 
-        $("#showhide").click(function(){
+        $("#showhide").click(function() {
             var pass = $(".myinput");
             if (pass.attr("type") === "password") {
                 pass.attr("type", "text");
